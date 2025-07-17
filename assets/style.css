@@ -1,0 +1,78 @@
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      background-color: #d5ecee;
+    }
+
+    .scene-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: #cccccc;
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #003f52;
+      padding: 2rem;
+      pointer-events: none;
+    }
+
+    .overlay h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .overlay p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .scroll-down {
+      font-size: 2rem;
+      margin-top: 2rem;
+      animation: bounce 2s infinite;
+      margin-left: -50px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
